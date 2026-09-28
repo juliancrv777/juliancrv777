@@ -1,10 +1,22 @@
 # Hi, I'm Julian
 
-**Software Developer · JavaScript / TypeScript · React · Node.js**
+**Software Engineer · TypeScript · Angular · React · Node.js**
 
-I build web applications and REST APIs with a focus on clear user flows, data consistency and automated tests. I'm looking for Junior Software Engineer and Frontend Developer opportunities.
+I build web applications and REST APIs with a focus on clear user flows, data consistency and automated tests. I'm focused on Software Engineer and Frontend Engineer opportunities, building production-oriented web applications, APIs and reliable data workflows.
 
 ## Featured projects
+
+### [OpsBoard — full-stack operations platform](https://github.com/juliancrv777/opsboard)
+
+A production-oriented operations workspace for projects, tasks, ownership and team visibility, with a public live demo.
+
+- **Implementation:** Angular feature architecture with Signals/RxJS, NestJS REST API, PostgreSQL/Prisma persistence, authentication and role-based authorization.
+- **Delivery:** automated frontend/backend tests, Docker images, Nginx, GitHub Actions and a Railway deployment.
+- **Validated workflow:** authenticated User → Project → Task flow with owners, assignees, roles and responsive mobile UI.
+- **Stack:** Angular, TypeScript, NestJS, PostgreSQL, Prisma, JWT/RBAC, Docker and GitHub Actions.
+
+[Live demo](https://web-production-29b16.up.railway.app) · [Architecture](https://github.com/juliancrv777/opsboard/blob/main/docs/ARCHITECTURE.md) · [Repository](https://github.com/juliancrv777/opsboard)
+
 
 ### [ReserveFlow — transactional reservation API](https://github.com/juliancrv777/reserveflow)
 
@@ -30,13 +42,13 @@ A responsive help desk that takes a request from creation to resolution, with pr
 
 ## Engineering focus
 
-- React interfaces with explicit loading, error and empty states.
-- REST APIs, input validation and SQL transactions.
+- Angular and React interfaces with explicit loading, error and empty states.
+- Full-stack TypeScript architecture, REST APIs, input validation and SQL transactions.
 - Concurrency, safe retries and failure handling.
 - Reproducible tests, Git workflows and documented tradeoffs.
 
-These are portfolio projects with documented boundaries. ReserveFlow targets a single host; IssueDesk currently uses a shared workspace without application-level login or roles. Its screenshots and walkthrough are public; the hosted app is private.
+These are portfolio projects with documented boundaries. OpsBoard provides the public full-stack demo; ReserveFlow targets a single host; IssueDesk currently uses a shared workspace without application-level login or roles. Its screenshots and walkthrough are public; the hosted app is private.
 
 ---
 
-**Português:** desenvolvedor com foco em aplicações web, APIs REST e testes automatizados. Busco oportunidades como Software Engineer Júnior ou Desenvolvedor Front-end. Nos projetos acima, você encontra demonstrações, código, testes e decisões de arquitetura.
+**Português:** desenvolvedor com foco em aplicações web, APIs REST e testes automatizados. Busco oportunidades como Software Engineer ou Frontend Engineer. Nos projetos acima, você encontra demonstrações, código, testes e decisões de arquitetura.
