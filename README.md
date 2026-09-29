@@ -1,54 +1,86 @@
-# Hi, I'm Julian
+# Hi, I'm Julian Carvalho
 
-**Software Engineer · TypeScript · Angular · React · Node.js**
+**Software Engineer · Full-Stack TypeScript · React · Next.js · Angular · Node.js/NestJS**
 
-I build web applications and REST APIs with a focus on clear user flows, data consistency and automated tests. I'm focused on Software Engineer and Frontend Engineer opportunities, building production-oriented web applications, APIs and reliable data workflows.
+I build production-oriented web applications, APIs and distributed workflows with a focus on **reliability, data consistency, concurrency, security and automated testing**.
+
+I'm currently open to **Software Engineer** and **Frontend Engineer** opportunities.
+
+## Core stack
+
+**Frontend:** TypeScript, React, Next.js, Angular, RxJS, HTML5, CSS3  
+**Backend:** Node.js, NestJS, REST APIs, WebSockets, Socket.IO, JWT, RBAC  
+**Data & infrastructure:** PostgreSQL, Prisma, Redis, BullMQ, Docker, GitHub Actions, Neon, Upstash, Railway, Render, Vercel  
+**Testing:** Jest, Vitest, Playwright, integration and E2E testing
 
 ## Featured projects
 
-### [OpsBoard — full-stack operations platform](https://github.com/juliancrv777/opsboard)
+### [LedgerX — production-minded payment systems engineering](https://github.com/juliancrv777/ledgerx)
 
-A production-oriented operations workspace for projects, tasks, ownership and team visibility, with a public live demo.
+[![LedgerX CI](https://github.com/juliancrv777/ledgerx/actions/workflows/ci.yml/badge.svg)](https://github.com/juliancrv777/ledgerx/actions/workflows/ci.yml)
 
-- **Implementation:** Angular feature architecture with Signals/RxJS, NestJS REST API, PostgreSQL/Prisma persistence, authentication and role-based authorization.
-- **Delivery:** automated frontend/backend tests, Docker images, Nginx, GitHub Actions and a Railway deployment.
-- **Validated workflow:** authenticated User → Project → Task flow with owners, assignees, roles and responsive mobile UI.
-- **Stack:** Angular, TypeScript, NestJS, PostgreSQL, Prisma, JWT/RBAC, Docker and GitHub Actions.
+A simulated payment platform built around financial correctness, concurrency and event-driven delivery.
 
-[Live demo](https://web-production-29b16.up.railway.app) · [Architecture](https://github.com/juliancrv777/opsboard/blob/main/docs/ARCHITECTURE.md) · [Repository](https://github.com/juliancrv777/opsboard)
+- Double-entry ledger with PostgreSQL **SERIALIZABLE** transactions and idempotent transfers.
+- Transactional outbox, Redis/BullMQ processing, signed HMAC webhooks, retries and DLQ.
+- Rotating refresh sessions, SSRF defenses, rate limiting, structured logs and Prometheus metrics.
+- Financial E2E stress test fires **100 concurrent transfer attempts**, validating 50 successful postings, 50 insufficient-funds rejections and a final balance of zero.
+- **Stack:** TypeScript, Next.js, React, NestJS, PostgreSQL, Prisma, Redis, BullMQ, Jest, Docker and GitHub Actions.
 
-
-### [ReserveFlow — transactional reservation API](https://github.com/juliancrv777/reserveflow)
-
-A backend for limited-capacity workshop bookings, designed to prevent overselling and duplicate reservations when requests compete or clients retry.
-
-- **Implementation:** HTTP endpoints, reservation rules, API-key authentication, ownership checks, persistence and integration tests.
-- **Key decision:** conditional inventory updates, saved idempotency responses and audit records share a SQLite transaction. Separate database connections test contention beyond one event loop.
-- **Try it:** run `npm run demo` to check 20 competing requests for five seats, retries and cancellation against the running API.
-- **Stack:** Node.js 24, JavaScript, SQLite, OpenAPI, Docker and GitHub Actions.
-
-[Project case study](https://github.com/juliancrv777/reserveflow/blob/main/docs/CASE-STUDY.md) · [Architecture](https://github.com/juliancrv777/reserveflow/blob/main/docs/ARCHITECTURE.md) · [Tests](https://github.com/juliancrv777/reserveflow/tree/main/test)
-
-### [IssueDesk — ticket management workspace](https://github.com/juliancrv777/issuedesk)
-
-A responsive help desk that takes a request from creation to resolution, with priorities, assignment, comments, search and history.
-
-- **Implementation:** React components and hooks, a typed API client, validated HTTP endpoints, SQL persistence and automated checks.
-- **Key decision:** version checks reject stale edits; atomic database batches keep ticket changes and history together. Retry identifiers prevent duplicate creation and comments.
-- **Validation:** 13 unit/domain/client tests and three HTTP integration scenarios using the compiled Worker and isolated local D1. GitHub Actions runs tests, type checks and the build.
-- **Stack:** React, TypeScript, Zod, Drizzle, SQLite / Cloudflare D1 and GitHub Actions.
-
-[Visual walkthrough](https://github.com/juliancrv777/issuedesk#see-the-workflow) · [Project case study](https://github.com/juliancrv777/issuedesk/blob/main/docs/CASE-STUDY.md) · [Architecture](https://github.com/juliancrv777/issuedesk/blob/main/docs/ARCHITECTURE.md) · [CI](https://github.com/juliancrv777/issuedesk/actions)
-
-## Engineering focus
-
-- Angular and React interfaces with explicit loading, error and empty states.
-- Full-stack TypeScript architecture, REST APIs, input validation and SQL transactions.
-- Concurrency, safe retries and failure handling.
-- Reproducible tests, Git workflows and documented tradeoffs.
-
-These are portfolio projects with documented boundaries. OpsBoard provides the public full-stack demo; ReserveFlow targets a single host; IssueDesk currently uses a shared workspace without application-level login or roles. Its screenshots and walkthrough are public; the hosted app is private.
+[Live demo](https://ledgerx-seven.vercel.app) · [Repository](https://github.com/juliancrv777/ledgerx)
 
 ---
 
-**Português:** desenvolvedor com foco em aplicações web, APIs REST e testes automatizados. Busco oportunidades como Software Engineer ou Frontend Engineer. Nos projetos acima, você encontra demonstrações, código, testes e decisões de arquitetura.
+### [PulseChat — real-time collaboration platform](https://github.com/juliancrv777/pulsechat)
+
+[![PulseChat CI](https://github.com/juliancrv777/pulsechat/actions/workflows/ci.yml/badge.svg)](https://github.com/juliancrv777/pulsechat/actions/workflows/ci.yml)
+
+A deployed multi-user collaboration app with persistent messaging and distributed realtime delivery.
+
+- JWT authentication, workspaces/roles, channels, persistent history, presence and typing indicators.
+- Socket.IO with Redis adapter for multi-instance realtime fan-out.
+- PostgreSQL/Prisma persistence with Neon as the production database.
+- Automated testing and CI around authenticated multi-user flows.
+- **Stack:** Next.js, React, TypeScript, NestJS, PostgreSQL, Prisma, Redis, Socket.IO, Docker and GitHub Actions.
+
+[Live demo](https://web-production-b634e.up.railway.app) · [Repository](https://github.com/juliancrv777/pulsechat)
+
+---
+
+### [OpsBoard — full-stack operations platform](https://github.com/juliancrv777/opsboard)
+
+A production-oriented workspace for projects, tasks, ownership and team visibility.
+
+- Angular architecture with Signals/RxJS and a NestJS REST API.
+- PostgreSQL/Prisma persistence with JWT, RBAC and server-side authorization.
+- Dockerized web/API delivery, Nginx and GitHub Actions validation.
+- **Stack:** Angular, TypeScript, NestJS, PostgreSQL, Prisma, JWT/RBAC, Docker and GitHub Actions.
+
+[Live demo](https://web-production-29b16.up.railway.app) · [Repository](https://github.com/juliancrv777/opsboard)
+
+---
+
+### [ReserveFlow — concurrency-safe reservation API](https://github.com/juliancrv777/reserveflow)
+
+A backend for limited-capacity bookings designed to prevent overselling and duplicate reservations under concurrent requests and retries.
+
+- Transactional reservation rules, idempotency, API keys, ownership and audit records.
+- Concurrency tests use independent database connections to exercise real contention.
+- OpenAPI documentation, Docker setup and GitHub Actions CI.
+- **Stack:** Node.js, REST, SQLite, OpenAPI, Docker and GitHub Actions.
+
+[Repository](https://github.com/juliancrv777/reserveflow)
+
+## Engineering focus
+
+- Reliable full-stack TypeScript systems and clean API boundaries.
+- React, Next.js and Angular interfaces with explicit loading, error and empty states.
+- SQL transactions, concurrency control, idempotency and safe retries.
+- Realtime systems with WebSockets/Socket.IO and Redis.
+- Authentication, authorization and practical application security.
+- Automated unit, integration and E2E testing.
+- Dockerized deployment and CI/CD with GitHub Actions.
+
+---
+
+**Português:** Engenheiro de software com foco em aplicações web Full Stack, APIs, concorrência, confiabilidade e testes automatizados. Busco oportunidades como Software Engineer ou Frontend Engineer.
