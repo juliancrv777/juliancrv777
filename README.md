@@ -9,8 +9,8 @@ I'm currently open to **Software Engineer** and **Frontend Engineer** opportunit
 ## Core stack
 
 **Frontend:** TypeScript, React, Next.js, Angular, RxJS, HTML5, CSS3  
-**Backend:** Node.js, NestJS, REST APIs, WebSockets, Socket.IO, JWT, RBAC  
-**Data & infrastructure:** PostgreSQL, Prisma, Redis, BullMQ, Docker, GitHub Actions, Neon, Upstash, Railway, Render, Vercel  
+**Backend:** Node.js, NestJS, Python, FastAPI, REST APIs, WebSockets, Socket.IO, JWT, RBAC  
+**Data & infrastructure:** PostgreSQL, pgvector, SQLite, Prisma, Redis, BullMQ, Docker, GitHub Actions, Neon, Upstash, Railway, Render, Vercel  
 **Testing:** Jest, Vitest, Playwright, integration and E2E testing
 
 ## Featured projects
@@ -60,14 +60,29 @@ A production-oriented workspace for projects, tasks, ownership and team visibili
 
 ---
 
-### [ReserveFlow — concurrency-safe reservation API](https://github.com/juliancrv777/reserveflow)
+### [AgentOps AI — grounded knowledge operations workspace](https://github.com/juliancrv777/agentops-ai)
 
-A backend for limited-capacity bookings designed to prevent overselling and duplicate reservations under concurrent requests and retries.
+A full-stack knowledge workspace that combines document ingestion, persistent conversations and citation-backed retrieval.
 
+- Next.js interface for secure registration, document upload and private investigation history.
+- FastAPI with PostgreSQL/pgvector search, organization isolation and explicit source citations.
+- Optional OpenAI-generated answers; deterministic offline test mode displays extractive excerpts rather than fabricated AI answers.
+- Docker Compose, migrations and CI-backed integration tests for authentication and tenant isolation.
+- **Stack:** Next.js, React, TypeScript, Python, FastAPI, PostgreSQL, pgvector, Redis, Docker and GitHub Actions.
+
+[Repository](https://github.com/juliancrv777/agentops-ai) · [Knowledge-chat documentation](https://github.com/juliancrv777/agentops-ai/blob/main/docs/chat.md)
+
+---
+
+### [ReserveFlow — full-stack reservation console and concurrency-safe API](https://github.com/juliancrv777/reserveflow)
+
+A full-stack reservation console backed by an API that prevents overselling and duplicate reservations under concurrent requests and retries.
+
+- Responsive web console for event discovery, seat booking, cancellation and admin audit operations.
 - Transactional reservation rules, idempotency, API keys, ownership and audit records.
 - Concurrency tests use independent database connections to exercise real contention.
 - OpenAPI documentation, Docker setup and GitHub Actions CI.
-- **Stack:** Node.js, REST, SQLite, OpenAPI, Docker and GitHub Actions.
+- **Stack:** JavaScript, HTML/CSS, Node.js, REST, SQLite, OpenAPI, Docker and GitHub Actions.
 
 [Repository](https://github.com/juliancrv777/reserveflow)
 
